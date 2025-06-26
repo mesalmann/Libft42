@@ -6,9 +6,10 @@
 /*   By: mesalman <mesalman@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/23 18:43:36 by mesalman          #+#    #+#             */
-/*   Updated: 2025/06/23 18:47:28 by mesalman         ###   ########.fr       */
+/*   Updated: 2025/06/26 17:54:31 by mesalman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
