@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mesalman <mesalman@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/27 15:11:18 by mesalman          #+#    #+#             */
-/*   Updated: 2025/05/27 15:57:18 by mesalman         ###   ########.fr       */
+/*   Created: 2025/07/04 12:41:40 by mesalman          #+#    #+#             */
+/*   Updated: 2025/07/04 12:41:52 by mesalman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
+#include "libft.h"
+
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	if ((c >= '0' && c <= '9')
-		|| (c >= 'a' && c <= 'z')
-		|| (c >= 'A' && c <= 'Z'))
-		return (1);
-	return (0);
+	t_list	*temp;
+
+	while (*lst)
+	{
+		temp = *lst;
+		*lst = (*lst)->next;
+		del(temp -> content);
+		free(temp);
+	}
+	*lst = NULL;
 }

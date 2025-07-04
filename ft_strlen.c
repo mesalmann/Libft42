@@ -6,9 +6,10 @@
 /*   By: mesalman <mesalman@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 16:13:48 by mesalman          #+#    #+#             */
-/*   Updated: 2025/06/24 19:14:02 by mesalman         ###   ########.fr       */
+/*   Updated: 2025/07/04 12:56:24 by mesalman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 size_t	ft_strlen(const char *s)
@@ -17,8 +18,6 @@ size_t	ft_strlen(const char *s)
 
 	i = 0;
 	while (s[i])
-	{
 		i++;
-	}
 	return (i);
 }
